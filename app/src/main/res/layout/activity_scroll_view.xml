@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ScrollViewActivity">
+
+    <com.example.daydayup.view.CusTextview
+        android:id="@+id/cusTv"
+        android:text="222222222222222"
+        android:textSize="150sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.example.daydayup.view.CusScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.example.daydayup.view.CusButton
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:background="@null"
+                style="@null"
+                android:text="111111"
+                android:textSize="100sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:text="111111"
+                android:textSize="100sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:text="111111"
+                android:textSize="100sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:text="111111"
+                android:textSize="100sp" />
+
+
+        </LinearLayout>
+
+    </com.example.daydayup.view.CusScrollView>
+
+
+
+</FrameLayout>
