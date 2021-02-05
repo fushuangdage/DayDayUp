@@ -13,7 +13,8 @@ import com.example.daydayup.util.simpleLogMethod
  * <author> <time> <version> <desc>
  */
 
-open class BaseLifecycleActivity : AppCompatActivity() {
+open class BaseLifecycleActivity() : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

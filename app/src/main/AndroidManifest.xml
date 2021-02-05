@@ -13,12 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SystemInfoActivity">
-
-        </activity>
         <activity
-            android:name=".activity.FragmentTestActivity"
-            android:label="@string/title_activity_fragment_test"
+            android:name=".activity.JavaCommonTestActivity"
+            android:label="@string/title_activity_java_common_test"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +23,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.CommonTestActivity">
+
+        </activity>
+        <activity android:name=".activity.SystemInfoActivity" />
+        <activity
+            android:name=".activity.FragmentTestActivity"
+            android:label="@string/title_activity_fragment_test"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
         <service
             android:name=".service.MyService"
@@ -36,7 +41,7 @@
         <activity android:name=".test.LayoutTestActivity" />
         <activity
             android:name=".activity.LifeCyclerLogActivity"
-            android:launchMode="singleTop"></activity>
+            android:launchMode="singleTop" />
         <activity android:name=".activity.RecyclerViewActivity" />
         <activity android:name=".activity.ScrollViewActivity" />
         <activity android:name=".activity.MainActivity" />

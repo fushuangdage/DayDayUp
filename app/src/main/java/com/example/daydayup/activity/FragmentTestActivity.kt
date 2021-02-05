@@ -6,14 +6,22 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.daydayup.R
 import com.example.daydayup.fragment.LifecycleFragment1
 import com.example.daydayup.fragment.LifecycleFragment2
+import com.example.daydayup.kotlin.Bean1
+import com.example.daydayup.kotlin.Bean2
+import com.example.daydayup.kotlin.Bean3
 import com.example.daydayup.ms.Test
 import com.example.daydayup.util.simpleLogMethod
 import kotlinx.android.synthetic.main.activity_fragment_test.*
 
-class FragmentTestActivity : BaseLifecycleActivity() {
+class FragmentTestActivity : BaseLifecycleActivity {
+
+    constructor(){
+        Log.d("fs666", "FragmentTestActivity : 构造")
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_fragment_test)
 
         if (savedInstanceState == null) {
@@ -46,6 +54,17 @@ class FragmentTestActivity : BaseLifecycleActivity() {
 
             }
         }
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        var bean1 = Bean1()
+        var bean2 = Bean2()
+        var bean3 = Bean3()
+
+        var next = bean1.next?.next?.next
 
     }
 }
