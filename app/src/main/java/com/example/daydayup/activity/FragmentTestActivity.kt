@@ -2,6 +2,7 @@ package com.example.daydayup.activity
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.daydayup.R
 import com.example.daydayup.fragment.LifecycleFragment1
@@ -23,11 +24,9 @@ class FragmentTestActivity : BaseLifecycleActivity {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_fragment_test)
-
         if (savedInstanceState == null) {
             var lifecycleFragment1 = LifecycleFragment1()
             var lifecycleFragment2 = LifecycleFragment2()
-
             supportFragmentManager.beginTransaction()
                 .add(R.id.fragment_container, lifecycleFragment1, "fragment1").add(
                     R.id.fragment_container,

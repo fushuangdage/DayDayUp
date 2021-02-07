@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.example.daydayup.R
 import com.example.daydayup.util.simpleLogMethod
 import kotlinx.android.synthetic.main.fragment_life_cycler1.*
@@ -55,9 +56,11 @@ class LifecycleFragment2 : Fragment() {
 
     override fun onResume() {
         if (index == 0) {
-            tv_title.visibility = View.INVISIBLE
-
+//            tv_title.visibility = View.INVISIBLE
         }
+        //通过decorView找某个id，不是相同id 的只招第一个 ，会找到LifecycleFragment1中的 textview
+        var tv = activity?.window?.decorView?.findViewById<TextView>(R.id.tv_title)
+
         simpleLogMethod("onResume")
 
         index--
