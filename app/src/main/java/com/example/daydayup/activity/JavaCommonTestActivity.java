@@ -1,5 +1,6 @@
 package com.example.daydayup.activity;
 
+import android.net.Uri;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -34,5 +35,29 @@ public class JavaCommonTestActivity extends AppCompatActivity {
 //                        .setAction("Action", null).show();
             }
         });
+
+        Uri parse = Uri.parse("");
+        Uri.Builder builder = parse.buildUpon().clearQuery();
+        String s = builder.toString();
+        Log.d("fs666", "onCreate: "+s);
+
+
+//        int bianliang;
+//        if(0<=bianliang && bianliang<6){
+//
+//            bianliang=bianliang-1;
+//
+//        }else if(5<bianliang && bianliang<11){
+//            bianliang=bianliang+1;
+//        }else(10<bianliang && bianliang<16){
+//            bianliang=bianliang-1;
+//        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+//        s.replace()
     }
 }
+

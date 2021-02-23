@@ -1,20 +1,18 @@
 package com.example.daydayup.activity
 
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.animation.Interpolator
 import android.widget.OverScroller
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.daydayup.R
 import com.example.daydayup.util.dumpHprof
 import com.example.daydayup.view.RvAdapter
-import java.util.concurrent.ThreadPoolExecutor
-import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var recyclerView: RecyclerView
@@ -27,6 +25,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             t * t * t * t * t + 1.0f
         }
 
+
+    override fun onResume() {
+        super.onResume()
+        val s =
+            "https://api.udache.com/gulfstream/pre-sale/v1/other/pGetSceneList?access_key_id=2&userlng=116.1111&access_key_id=2"
+
+        var replace = s.replace(Regex("&userlng=([^&]+)&"), "&").replace(Regex("access_key_id=([^&]+)&"), "")
+
+        Log.d("fs66666", "onResume: $replace")
+
+    }
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,7 +50,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         })
 
-        recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener(){
+        recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
 
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)

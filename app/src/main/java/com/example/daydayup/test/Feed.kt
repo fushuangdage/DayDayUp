@@ -12,3 +12,11 @@ package com.example.daydayup.test
     var name: String="2"
     var age:Int=1
 }
+
+class User(val map: HashMap<String,Any>) {
+
+    val name: String by map
+
+    val age: Int by map
+
+}

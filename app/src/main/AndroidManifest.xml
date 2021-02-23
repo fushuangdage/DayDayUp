@@ -27,11 +27,7 @@
             android:name=".activity.FragmentTestActivity"
             android:label="@string/title_activity_fragment_test"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <service
@@ -46,7 +42,13 @@
             android:launchMode="singleTop" />
         <activity android:name=".activity.RecyclerViewActivity" />
         <activity android:name=".activity.ScrollViewActivity" />
-        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
